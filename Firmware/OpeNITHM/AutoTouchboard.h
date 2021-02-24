@@ -32,7 +32,7 @@ class AutoTouchboard {
     int deltaThreshold = 5;
     double releaseThreshold = 0.8;
 #else
-    int deltaThreshold = 6;
+    int deltaThreshold = 15;
     double releaseThreshold = 0.8;
 #endif
     

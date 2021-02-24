@@ -97,10 +97,19 @@ KeyState AutoTouchboard::update(int key) {
     } else if (pressure > triggerThresholdsSingle[key]) {
       states[key] = SINGLE_PRESS;
     }
-  // new release detected
-  } else if (states[key] != UNPRESSED) {
+  } else if (states[key] == SINGLE_PRESS) {
+    // going from single -> double
+    if (pressure > triggerThresholdsDouble[key]) {
+      states[key] = DOUBLE_PRESS;
+    // releasing single
+    } else if (pressure < releaseThresholdsSingle[key]) {
+      states[key] = UNPRESSED;
+    }
+  } else if (states[key] == DOUBLE_PRESS) {
+    // releasing completely
     if (pressure < releaseThresholdsSingle[key]) {
       states[key] = UNPRESSED;
+    // going from double -> single
     } else if (pressure < releaseThresholdsDouble[key]) {
       states[key] = SINGLE_PRESS;
     }
