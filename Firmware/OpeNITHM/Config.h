@@ -10,7 +10,7 @@
 // board and have hand-wired your controller, it's strongly advised to use 
 // the pinout and configurations for OPENITHM_V1_1
 // #define OPENITHM_V1_0   // Version 1.0 (No version number on board)
-#define OPENITHM_V1_1   // Version 1.1 (v1.1 on board under logo)
+// #define OPENITHM_V1_1   // Version 1.1 (v1.1 on board under logo)
 // #define OPENITHM_V2_0   // Version 2.0 (v2.0 in upper left of board)
 // #define OPENITHM_V2_1   // Version 2.1 (v2.1 in upper left of board)
 // #define OPENITHM_FULL_V1_0 // Version 1.0 of the fully integrated board with touch sensors (Not common)
@@ -30,7 +30,7 @@
 
 // Uncomment this if you have lighted separators between the keys in your controller.
 // This option is *not* applicable to the standard 3D printed controller builds.
-//#define KEY_DIVIDERS
+#define KEY_DIVIDERS
 
 // Uncomment this if one of the following applies to you:
 //  * You are using OPENITHM_V2_0 or below and have bridged pins 17 and 24 on your Teensy, or
@@ -43,7 +43,7 @@
 // *** FOR CALIBRATING AND DEBUGGING
 
 // Uncomment this line to output the touch values to the Serial port (for use with Arduino's Serial Plotter)
-//#define SERIAL_KEY_PLOT
+// #define SERIAL_KEY_PLOT
 
 // Uncomment this line if you want RAW touch values (vs. normalized)
 // #define SERIAL_RAW_VALUES
@@ -52,7 +52,7 @@
 #define PLOT_PIN -1
 
 // Uncomment this line to output the air sensor values to the Serial port
-#define SERIAL_AIR_READINGS
+// #define SERIAL_AIR_READINGS
 
 // Uncomment this if you wish to ignore a falsely calibrated air sensor
 // #define IGNORE_AIR_CALIBRATION
