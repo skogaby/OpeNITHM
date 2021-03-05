@@ -390,11 +390,19 @@ Prior to compilation, review the (numerous) options available to the end user in
 
 #### Configuring
 
-To be revised.
+The firmware is now largely self-configuring, as it determines thresholds for the sensors at every power on. However, you may wish to adjust the tolerance values that the automatic calibration works under. This can be done for both the keys and the air sensors.
+
+##### Keys
+
+In AutoTouchboard.h, there are two variables that affect how sensitive your keys are, deltaThreshold and releaseThreshold. deltaThreshold is the value that determines how much the key readings must change to register a press - increasing this requires a harder press to register, and decreasing it requires a softer press. If, for example, you are experiencing the keys registering a touch before you actually touch them, increase this value. releaseThreshold is the change requried to detect a release - this usually does not need to be modified.
+
+##### Air Sensors
+
+In AirSensor.h, there is a const named AIR_INPUT_DETECTION which defaults to 0.9. This is the percentage of the maximum reading detected during calibration that must be dropped below to consider the sensor triggered. At 0.9, this means that by default the reading must be 10% lower than the known maximum for the sensor to be triggered. Lowering this value will make your air sensors less sensitive, which can help stop them spamming. Increasing it will make your sensors more sensitive - although at 0.9, there isn't a lot of leeway to make the sensors more sensitive by default.
 
 #### Power On
 
-To be revised.
+During power on, both the touchboard and the air sensors will automatically calibrate. This process is indicated by the lights flashing between red and purple. This is an indication that you should remove your hands from the board. The lights will then turn red while calibration occurs. Once it is complete, the lights will briefly flash green to show that the board is ready, then move to yellow, indicating the board is active and ready for input. Pressing a key will then turn it pink.
 
 #### Output
 
