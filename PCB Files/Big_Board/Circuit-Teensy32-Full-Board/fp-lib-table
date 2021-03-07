@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name OpeNITHM)(type KiCad)(uri ${KIPRJMOD}/OpeNITHM.pretty)(options "")(descr ""))
+  (lib (name TouchPad)(type KiCad)(uri ${KIPRJMOD}/TouchPad.pretty)(options "")(descr ""))
+  (lib (name teensy)(type KiCad)(uri ${KIPRJMOD}/teensy.pretty)(options "")(descr ""))
+)

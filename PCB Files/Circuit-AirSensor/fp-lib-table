@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name AirSensor_Local)(type KiCad)(uri ${KIPRJMOD}/AirSensor_Local.pretty)(options "")(descr ""))
-)

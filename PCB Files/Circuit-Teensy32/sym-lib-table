@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name 74HC4051)(type Legacy)(uri ${KIPRJMOD}/74HC4051.lib)(options "")(descr ""))
-)
